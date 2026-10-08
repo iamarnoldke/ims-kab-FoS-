@@ -2,10 +2,10 @@
 
 // IMS — Database Configuration
 
-$DB_HOST = "mysql.railway.internal";
-$DB_PORT = 3306;
+$DB_HOST = "localhost";
+$DB_PORT = 4306;
 $DB_USER = "root";
-$DB_PASS = "KCjojjCWvptlpMhdhIUtMSUdnBPOpPTJ";
+$DB_PASS = "";
 $DB_NAME = "ims_db";
 
 $conn = mysqli_connect($DB_HOST, $DB_USER, $DB_PASS, $DB_NAME, $DB_PORT);
