@@ -1,8 +1,6 @@
 <?php
-// ============================================================
+
 // IMS — Database Configuration
-// Faculty of Science, Kabale University
-// ============================================================
 
 $DB_HOST = "localhost";
 $DB_PORT = 4306;
@@ -40,7 +38,7 @@ function audit_log($conn, $user_id, $action_type, $details) {
     $ip          = sanitise($conn, $_SERVER['REMOTE_ADDR'] ?? 'unknown');
     mysqli_query($conn,
         "INSERT INTO audit_log (user_id, action_type, details, ip_address)
-         VALUES ($user_id, '$action_type', '$details', '$ip')"
+        VALUES ($user_id, '$action_type', '$details', '$ip')"
     );
 }
 

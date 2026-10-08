@@ -46,7 +46,7 @@ $recent_grns = mysqli_query($conn,
 ?>
 
 <div class="page-header">
-  <div><h1>Goods Received</h1><p>Record stock received into the store and update inventory levels.</p></div>
+  <div><h1>Stock Received</h1><p>Record stock received into the store and update inventory levels.</p></div>
 </div>
 
 <?php if ($msg): ?><div class="alert alert-success"><i class="fa fa-check-circle"></i> <?= $msg ?></div><?php endif; ?>
@@ -56,7 +56,7 @@ $recent_grns = mysqli_query($conn,
 
 <!-- Record GRN -->
 <div class="card">
-  <div class="card-header"><h2>Record Goods Received</h2></div>
+  <div class="card-header"><h2>Record Stock Received</h2></div>
   <div class="card-body">
     <form method="POST">
       <input type="hidden" name="action" value="receive">

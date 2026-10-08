@@ -13,16 +13,16 @@ $issued_today  = mysqli_fetch_assoc(mysqli_query($conn,"SELECT COUNT(*) c FROM s
 // Recent requests
 $recent = mysqli_query($conn,
     "SELECT r.ref_number, r.status, r.created_at, u.full_name, d.dept_name
-     FROM stock_requests r
-     JOIN users u ON r.requester_id=u.user_id
-     JOIN departments d ON r.dept_id=d.dept_id
-     ORDER BY r.created_at DESC LIMIT 8"
+    FROM stock_requests r
+    JOIN users u ON r.requester_id=u.user_id
+    JOIN departments d ON r.dept_id=d.dept_id
+    ORDER BY r.created_at DESC LIMIT 8"
 );
 
 // Low stock items
 $low_items = mysqli_query($conn,
     "SELECT item_name, category, qty_on_hand, reorder_point, unit_of_measure
-     FROM stock_items WHERE qty_on_hand<=reorder_point AND is_active=1 ORDER BY qty_on_hand ASC LIMIT 6"
+    FROM stock_items WHERE qty_on_hand<=reorder_point AND is_active=1 ORDER BY qty_on_hand ASC LIMIT 6"
 );
 ?>
 
